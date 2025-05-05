@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opt-In Management</title>
+
+    <!-- Inter google font import  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    />
+
+    <!-- css files import  -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/optin.css" />
+  </head>
+
+  <body>
+    <div class="">
+      <!-- navbar  -->
+      <div class="navbar-container">
+        <h4>Opt-In Management</h4>
+
+        <div class="buttons">
+          <button class="cancel-button">Cancel</button>
+          <button class="save-button">Save</button>
+        </div>
+      </div>
+      <div class="horizontal-line"></div>
+
+      <div class="body-section">
+        <!-- Opt-In header  -->
+        <div class="header">
+          <div class="title">Opt-In Management</div>
+          <div class="images">
+            <img
+              src="./assets/commentIcon.png"
+              alt="comment icon"
+              class="image-1"
+            />
+            <img
+              src="./assets/Isolation_Mode.png"
+              alt="comment icon"
+              class="image-2"
+            />
+          </div>
+        </div>
+
+        <div class="optin-section">
+          <!-- Opt-In section  -->
+          <div class="optin-card">
+            <div class="optin-content">
+              <img src="./assets/shieldIcon.png" alt="shield Icon" />
+              <div class="optin-text">
+                <p class="text1">Opt-in</p>
+                <p class="text2">A text that explains what opt-in is</p>
+              </div>
+            </div>
+
+            <div class="optin-container">
+              <!-- Left side -->
+              <div class="left-side">
+                <div class="left-description">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="optin-title">Opt-in Response</p>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="optin-toggle" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <p class="optin-subtitle">
+                    Setup a response message for opt-in user keywords
+                  </p>
+                  <button class="configure-btn">
+                    <span><img src="./assets/edit.png" alt="edit icon" /></span
+                    >Configure
+                  </button>
+                </div>
+                <div class="left-message">
+                  <img
+                    src="./assets/whatsappIcon.png"
+                    alt="whatsapp icon"
+                    class="whatsapp-icon"
+                  />
+                  <p class="response-text">
+                    Hi! Thanks for connecting. Someone from our<br />
+                    team will get in touch soon.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right side -->
+              <div class="right-side">
+                <p class="optin-title">Opt-in Keywords</p>
+                <p class="optin-subtitle">
+                  The user will have to type exactly one of these messages on
+                  which<br />
+                  they should be automatically opted-in
+                </p>
+
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    class="keyword-input"
+                    placeholder="# Add keyword"
+                  />
+                  <img
+                    src="./assets/plusIcon.png"
+                    alt="add icon"
+                    class="add-icon"
+                  />
+                </div>
+
+                <div class="display-keywords">
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Opt-out section  -->
+          <div class="optin-card">
+            <div class="optin-content">
+              <img src="./assets/shieldCross.png" alt="shield Icon" />
+              <div class="optin-text">
+                <p class="text1">Opt-out</p>
+                <p class="text2">A text that explains what opt-in is</p>
+              </div>
+            </div>
+
+            <div class="optin-container">
+              <!-- Left side -->
+              <div class="left-side">
+                <div class="left-description">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <p class="optin-title">Opt-out Response</p>
+                    <label class="toggle-switch">
+                      <input type="checkbox" id="optin-toggle" />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+
+                  <p class="optin-subtitle">
+                    Setup a response message for opt-in user keywords
+                  </p>
+                  <button class="configure-btn">
+                    <span><img src="./assets/edit.png" alt="edit icon" /></span
+                    >Configure
+                  </button>
+                </div>
+                <div class="left-message">
+                  <img
+                    src="./assets/whatsappIcon.png"
+                    alt="whatsapp icon"
+                    class="whatsapp-icon"
+                  />
+                  <p class="response-text">
+                    Hi! Thanks for connecting. Someone from our<br />
+                    team will get in touch soon.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right side -->
+              <div class="right-side">
+                <p class="optin-title">Opt-out Keywords</p>
+                <p class="optin-subtitle">
+                  The user will have to type exactly one of these messages on
+                  which<br />
+                  they should be automatically opted-out
+                </p>
+
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    class="keyword-input"
+                    placeholder="# Add keyword"
+                  />
+                  <img
+                    src="./assets/plusIcon.png"
+                    alt="add icon"
+                    class="add-icon"
+                  />
+                </div>
+
+                <div class="display-keywords">
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                  <div class="keyword">
+                    Keyword
+                    <span
+                      ><img src="./assets/Icon.png" alt="cross icon"
+                    /></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter";
+  background-color: #ffffff;
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: #d7dee7;
+  width: 100%;
+}
+
+.body-section{
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 60px;
+  padding: 0px 10px;
+}
