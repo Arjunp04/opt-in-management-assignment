@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/optin.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+    <link rel="stylesheet" href="./styles/modal-image.css" />
+    <link rel="stylesheet" href="./styles/preApproved.css" />
   </head>
 
   <body>
@@ -82,7 +86,7 @@
                   <p class="optin-subtitle">
                     Setup a response message for opt-in user keywords
                   </p>
-                  <button class="configure-btn">
+                  <button class="configure-btn" onclick="openModal()">
                     <span><img src="./assets/edit.png" alt="edit icon" /></span
                     >Configure
                   </button>
@@ -190,7 +194,7 @@
                   <p class="optin-subtitle">
                     Setup a response message for opt-in user keywords
                   </p>
-                  <button class="configure-btn">
+                  <button class="configure-btn" onclick="openModal()">
                     <span><img src="./assets/edit.png" alt="edit icon" /></span
                     >Configure
                   </button>
@@ -273,6 +277,217 @@
           </div>
         </div>
       </div>
+
+      <!-- modal div  -->
+      <div class="modal" id="openModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-heading">Configure Welcome Message</p>
+            <span onclick="closeModal()" class="close-button"
+              ><img src="./assets/close.png" alt="cross"
+            /></span>
+          </div>
+          <div class="modal-container">
+            <!-- left side -->
+            <div class="modal-left">
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="message-type" value="template" />
+                  Pre-approved template message</label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    name="message-type"
+                    value="regular"
+                    checked
+                  />
+                  Regular message</label
+                >
+              </div>
+
+              <div class="type-group">
+                <p>Type</p>
+                <div class="type-options">
+                  <label
+                    ><input
+                      type="radio"
+                      name="msg-format"
+                      value="text"
+                      checked
+                    />
+                    Text</label
+                  >
+                  <label
+                    ><input type="radio" name="msg-format" value="image" />
+                    Image</label
+                  >
+                  <label
+                    ><input type="radio" name="msg-format" value="video" />
+                    Video</label
+                  >
+                  <label
+                    ><input type="radio" name="msg-format" value="document" />
+                    Document</label
+                  >
+                </div>
+              </div>
+
+              <!-- Template Dropdown -->
+              <div id="templateDropdown" class="templateDropdown">
+                <label class="template-label" for="templateSelect">
+                  Template Name <span>*</span>
+                </label>
+                <div class="templateSelectWrapper" id="templateSelectWrapper">
+                  <select id="templateSelect" class="templateSelect">
+                    <option value="template1">Template 1</option>
+                    <option value="template2">Template 2</option>
+                  </select>
+                  <img
+                    src="./assets/chevron.png"
+                    alt="dropdown"
+                    class="custom-arrow"
+                    id="customArrow"
+                  />
+                </div>
+              </div>
+
+              <!-- Media Fields (Initially Hidden) -->
+              <div id="mediaFields" class="mediaFields">
+                <label>Upload Media File</label>
+                <p class="file-support">
+                  Supported file type : <span>.png or .jpeg</span>
+                </p>
+                <p class="file-size">Maximum file size <span> : 5MB</span></p>
+                <div id="mediaUpload">
+                  <img src="./assets/imageIcon.png" alt="imageicon" />
+                  Upload From Media Library
+                </div>
+
+                <img src="./assets/or-frame.png" alt="or-frame" />
+                <div class="media-url">
+                  <span>Media URL</span>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    value="https://images.unsplash.com/photo-1637979910374-ce7e8736b670?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                  <button>Add Variable</button>
+                </div>
+              </div>
+
+              <div id="valuesDiv" class="valuesDiv">
+                <p>Values</p>
+
+                <!-- Variable Row 1 -->
+                <div class="variable-row">
+                  <div class="input-wrapper">
+                    <label for="variableName1"
+                      >Variable Name <span> * </span></label
+                    >
+                    <input
+                      type="text"
+                      id="variableName1"
+                      placeholder="Variable Name"
+                      value="1"
+                    />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="value1">Value <span>*</span></label>
+                    <input
+                      type="text"
+                      id="value1"
+                      placeholder="Value"
+                      value="Mohit"
+                    />
+                  </div>
+                </div>
+
+                <!-- Variable Row 2 -->
+                <div class="variable-row">
+                  <div class="input-wrapper">
+                    <label for="variableName2"
+                      >Variable Name <span>*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="variableName2"
+                      placeholder="Variable Name"
+                      value="2"
+                    />
+                  </div>
+                  <div class="input-wrapper">
+                    <label for="value2">Value <span>*</span></label>
+                    <input
+                      type="text"
+                      id="value2"
+                      placeholder="Value"
+                      value="Zara"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <label class="message-label">
+                Message Body <span class="required">*</span>
+                <span id="charCount">0/4096</span>
+              </label>
+
+              <div class="textarea-wrapper">
+                <textarea
+                  id="messageBox"
+                  placeholder="Enter your message here"
+                  maxlength="4096"
+                ></textarea>
+
+                <div class="toolbar">
+                  <button>
+                    <img src="./assets/format-bold.png" alt="Bold" />
+                  </button>
+                  <button>
+                    <img src="./assets/format-italic.png" alt="Italic" />
+                  </button>
+                  <button>
+                    <img src="./assets/format-underline.png" alt="Underline" />
+                  </button>
+
+                  <!-- Vertical Separator -->
+                  <div class="separator"></div>
+
+                  <button>
+                    <img src="./assets/emoji-happy.png" alt="Emoji" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- right side  -->
+            <div class="modal-right">
+              <img
+                src="./assets/whatsappIcon.png"
+                alt="whatsapp icon"
+                class="whatsapp-icon"
+              />
+              <div class="response-text">
+                <div id="mediaPreview">
+                  <img src="" alt="image1" id="previewImage" />
+                  <div id="filePreview">
+                    <img src="./assets/file.png" alt="File Icon" />
+                  </div>
+                </div>
+                Hi {{1}}, please find details in attached pdf as discussed over
+                call and click on demo link to explore demo. id :demo password :
+                1289 <br /><br />Thank You {{2}}
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="cancel-btn">Cancel</button>
+            <button class="save-btn">Save</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@
   position: absolute;
   top: 64px;
   left: 40px;
+  white-space: nowrap;
 }
 
 .images {
@@ -29,6 +30,43 @@
   position: absolute;
   right: 60px;
   z-index: -50;
+}
+
+/* Responsive override for screen width < 500px */
+@media (max-width: 499px) {
+  .title {
+    white-space: normal;
+    width: max-content; 
+    max-width: 100px; 
+    top:40px;
+    left: 20px;
+  }
+
+  .image-1 {
+    right: 150px;
+  }
+
+  .image-2 {
+    right: 20px;
+  }
+}
+
+@media (min-width: 499px) and (max-width: 580px) {
+  .title {
+    left: 20px;
+  }
+
+  .images {
+    margin-right: -50px;
+  }
+
+  .image-1 {
+    right: 140px;
+  }
+
+  .image-2 {
+    right: 15px;
+  }
 }
 
 .optin-section {
@@ -111,9 +149,9 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom:0;
+  bottom: 0;
   background-color: #ccc;
-  transition: 0.3s;
+  transition: 0.2s;
   border-radius: 34px;
 }
 
@@ -126,7 +164,7 @@
   left: 3px;
   bottom: 2px;
   background-color: white;
-  transition: 0.3s;
+  transition: 0.2s;
   border-radius: 50%;
 }
 
@@ -168,7 +206,7 @@
   font-size: 16px;
   font-weight: 500;
   margin-top: 20px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .configure-btn:hover {

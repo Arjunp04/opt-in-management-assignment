@@ -15,9 +15,34 @@ body {
   width: 100%;
 }
 
-.body-section{
-  max-width: 1000px;
+.body-section {
   margin: auto;
   margin-bottom: 60px;
   padding: 0px 10px;
+  max-width: 1000px;
+}
+
+@media (min-width: 500px) and (max-width: 648px) {
+.body-section{
+padding: 0px 15px;
+}
+}
+
+@media (min-width: 648px) and (max-width: 850px) {
+  .body-section{
+padding: 0px 30px;
+}
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+  .body-section{
+padding: 0px 40px;
+}
+}
+
+@media (min-width: 1200px) {
+ .body-section{
+  padding: 0px 0px;
+  max-width: 1000px;
+}
 }

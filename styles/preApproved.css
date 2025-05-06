@@ -1,0 +1,101 @@
+.templateDropdown {
+  text-align: left;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+.template-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #68687b;
+  margin-top: 2px;
+}
+
+.template-label span {
+  color: red;
+}
+
+.templateSelectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Select styling to hide the default dropdown arrow */
+.templateSelect {
+  border-radius: 8px;
+  border: 1px solid #d7dee7;
+  padding: 12px 16px;
+  background-color: white;
+  appearance: none; /* Remove default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none; /* Remove for Firefox */
+  width: 100%;
+  padding-right: 40px;
+  outline: none;
+}
+
+/* Custom arrow styling */
+.custom-arrow {
+  position: absolute;
+  right: 12px;
+  width: 16px;
+  pointer-events: none;
+}
+
+.valuesDiv {
+  margin-top: 24px;
+  text-align: left;
+}
+
+.valuesDiv p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #1a1a1a;
+}
+
+.variable-row {
+  display: flex;
+  margin-top: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-right: 20px;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #68687b;
+  margin-bottom: 2px;
+}
+
+.input-wrapper span {
+  color: red;
+}
+
+.input-wrapper #variableName1,
+#variableName2 {
+  border-radius: 8px;
+  border: 1px solid #d7dee7;
+  padding: 12px 16px;
+  background-color: #f2f1f3;
+  opacity: 50%;
+  outline: none;
+}
+
+
+.input-wrapper #value1,
+#value2 {
+  border-radius: 8px;
+  border: 1px solid #d7dee7;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  outline: none;
+}

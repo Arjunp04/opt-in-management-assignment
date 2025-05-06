@@ -1,8 +1,6 @@
 .navbar-container {
   max-width: 1170px;
   padding: 12px;
-  height: 64px;
-  border-bottom: 1px solid #d7dee7;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,11 +27,19 @@ h4 {
   cursor: pointer;
 }
 
+@media (max-width: 400px) {
+ .navbar-container{
+  flex-direction: column;
+ }
+}
+
+
+
 .cancel-button {
   color: #68687b;
   border: 1px solid #bdbdc8;
   background: transparent;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .cancel-button:hover{
@@ -45,7 +51,7 @@ h4 {
   background: #1c73e8;
   color: white;
   border: 1px;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .save-button:hover{
