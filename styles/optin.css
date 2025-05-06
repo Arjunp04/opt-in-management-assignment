@@ -207,6 +207,8 @@
   font-weight: 500;
   margin-top: 20px;
   transition: background-color 0.2s ease-in-out;
+      box-shadow: 0px 1px 5px rgb(186, 182, 182);
+
 }
 
 .configure-btn:hover {
@@ -257,6 +259,7 @@
   border: 1px solid #d7dee7;
   border-radius: 8px;
   font-size: 14px;
+  outline: none;
 }
 
 .add-icon {
@@ -285,4 +288,5 @@
   color: #1a1a1a;
   display: flex;
   gap: 8px;
+  cursor: pointer;
 }
